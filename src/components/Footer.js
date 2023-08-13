@@ -1,17 +1,11 @@
 import React from "react";
-import { motion } from "framer-motion";
 import Link from "next/link";
 
 const Footer = () => {
   return (
     <section className="block min-h-[32px] mt-[20rem] pb-[80px]">
       <div className="w-full relative mx-auto px-32">
-        <motion.div
-          className="w-full sticky grid grid-cols-12 gap-y-8 content-stretch justify-stretch justify-items-stretch items-start"
-          initial={{ y: 50, opacity: 0 }}
-          whileInView={{ y: 0, opacity: 1 }}
-          transition={{ duration: 1.4, ease: "easeOut" }}
-        >
+        <div className="w-full sticky grid grid-cols-12 gap-y-8 content-stretch justify-stretch justify-items-stretch items-start">
           <p className="text-black text-lg font-light col-start-1 col-end-2">
             Don't be shy
           </p>
@@ -58,7 +52,7 @@ const Footer = () => {
               Licences
             </Link>
           </div>
-        </motion.div>
+        </div>
       </div>
     </section>
   );
