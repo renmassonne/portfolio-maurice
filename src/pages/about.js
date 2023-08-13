@@ -1,13 +1,14 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { ArrowIcon } from "@/components/Icons";
 
 import Head from "next/head";
 import Image from "next/image";
 import proFilePic from "../../public/profilePic.png";
 import Link from "next/link";
-import { ArrowIcon } from "@/components/Icons";
 
 const FramerImage = motion(Image);
+const MotionLink = motion(Link);
 
 const about = () => {
   return (
@@ -24,23 +25,59 @@ const about = () => {
                 className="text-black font-light text-2xl row-span-1 col-start-1 col-end-2 self-end"
                 initial={{ y: -50, opacity: 0 }}
                 whileInView={{ y: 0, opacity: 1 }}
-                transition={{ duration: 1.4, ease: "easeOut" }}
+                transition={{ delay: 1.2, duration: 1.4, ease: "easeOut" }}
               >
                 01
               </motion.p>
 
-              <h2
-                className="text-black uppercase row-span-1 col-start-4 col-end-12 text-[16vw] self-end justify-start"
-                style={{ lineHeight: "85%" }}
+              <div
+                className="relative row-span-1 col-start-3 col-end-12 w-full flex flex-wrap items-center justify-start font-normal mx-auto text-[16vw] text-black z-10 text-center uppercase"
+                style={{ lineHeight: "91%", letterSpacing: "-0.5vw" }}
               >
-                About
-              </h2>
+                <div className="w-full flex flex-row justify-center items-center">
+                  <motion.h1
+                    initial={{ opacity: 0, rotateZ: 5, translateY: "100%" }}
+                    animate={{ translateY: 0, rotateZ: 0, opacity: 1 }}
+                    transition={{ delay: 0.2, duration: 1.4, ease: "easeOut" }}
+                  >
+                    A
+                  </motion.h1>
+                  <motion.h1
+                    initial={{ opacity: 0, rotateZ: 5, translateY: "100%" }}
+                    animate={{ translateY: 0, rotateZ: 0, opacity: 1 }}
+                    transition={{ delay: 0.25, duration: 1.4, ease: "easeOut" }}
+                  >
+                    b
+                  </motion.h1>
+                  <motion.h1
+                    initial={{ opacity: 0, rotateZ: 5, translateY: "100%" }}
+                    animate={{ translateY: 0, rotateZ: 0, opacity: 1 }}
+                    transition={{ delay: 0.3, duration: 1.4, ease: "easeOut" }}
+                  >
+                    o
+                  </motion.h1>
+                  <motion.h1
+                    initial={{ opacity: 0, rotateZ: 5, translateY: "100%" }}
+                    animate={{ translateY: 0, rotateZ: 0, opacity: 1 }}
+                    transition={{ delay: 0.35, duration: 1.4, ease: "easeOut" }}
+                  >
+                    u
+                  </motion.h1>
+                  <motion.h1
+                    initial={{ opacity: 0, rotateZ: 5, translateY: "100%" }}
+                    animate={{ translateY: 0, rotateZ: 0, opacity: 1 }}
+                    transition={{ delay: 0.4, duration: 1.4, ease: "easeOut" }}
+                  >
+                    t
+                  </motion.h1>
+                </div>
+              </div>
 
               <motion.p
                 className="text-black text-5xl font-light row-span-2 col-start-4 col-end-13"
                 initial={{ y: 50, opacity: 0 }}
                 whileInView={{ y: 0, opacity: 1 }}
-                transition={{ duration: 1.4, ease: "easeOut" }}
+                transition={{ delay: 1.2, duration: 1.4, ease: "easeOut" }}
               >
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                 Suspendisse varius enim in eros elementum tristique.
@@ -50,7 +87,7 @@ const about = () => {
                 className="mt-24 text-black text-2xl row-span-3 font-light col-start-7 col-end-13"
                 initial={{ y: 50, opacity: 0 }}
                 whileInView={{ y: 0, opacity: 1 }}
-                transition={{ duration: 1.4, ease: "easeOut" }}
+                transition={{ delay: 1.2, duration: 1.4, ease: "easeOut" }}
               >
                 Nunc urna, montes, id purus eget. Vestibulum sit non diam purus.
                 At nibh aenean eu venenatis id fames sollicitudin. Erat fusce
@@ -60,14 +97,14 @@ const about = () => {
                 velit cursus quis nibh arcu aliquet enim.
               </motion.p>
 
-              <div className="relative overflow-hidden row-span-3 col-start-2 col-end-6 bg-red-500">
+              <div className="relative overflow-hidden row-span-3 col-start-2 col-end-6">
                 <FramerImage
                   priority
                   alt="profilePic"
                   style={{ objectFit: "cover" }}
-                  initial={{ scaleX: 1.5, scaleY: 1.5 }}
-                  animate={{ scaleX: 1, scaleY: 1 }}
-                  transition={{ delay: 0.1, duration: 1.2, ease: "easeInOut" }}
+                  initial={{ opacity: 0, scaleX: 1.5, scaleY: 1.5 }}
+                  animate={{ opacity: 1, scaleX: 1, scaleY: 1 }}
+                  transition={{ delay: 1.2, duration: 1.2, ease: "easeInOut" }}
                   src={proFilePic}
                 />
               </div>
@@ -77,29 +114,37 @@ const about = () => {
 
         <section className="mb-56">
           <div className="w-full relative mx-auto px-32">
-            <div className="w-full grid grid-cols-12 mb-28 content-stretch justify-stretch justify-items-stretch items-stretch">
-              <motion.p
+            <motion.div
+              className="w-full grid grid-cols-12 mb-28 content-stretch justify-stretch justify-items-stretch items-stretch"
+              initial={{ y: 50, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              transition={{ duration: 1.4, ease: "easeOut" }}
+            >
+              <p
                 className="text-black font-light text-2xl row-span-1 col-start-1 col-end-2 self-end"
                 initial={{ y: -50, opacity: 0 }}
                 whileInView={{ y: 0, opacity: 1 }}
                 transition={{ duration: 1.4, ease: "easeOut" }}
               >
                 02
-              </motion.p>
+              </p>
 
               <h2
-                className="text-black uppercase row-span-1 col-start-4 col-end-12 text-[11vw] self-end justify-start"
+                className="text-black font-normal uppercase row-span-1 col-start-4 col-end-12 text-[11vw] self-end justify-start"
                 style={{ lineHeight: "89%" }}
               >
                 Services
               </h2>
-            </div>
+            </motion.div>
 
             <div className="w-full grid grid-cols-12 gap-x-10">
               <div className="col-start-4 col-end-13">
-                <Link
+                <MotionLink
                   href="/"
                   className="flex flex-col py-12 pb-16 border-y-[1px] border-lightGrey"
+                  initial={{ y: 50 }}
+                  whileInView={{ y: 0 }}
+                  transition={{ duration: 1.4, ease: "easeOut" }}
                 >
                   <div className="flex flex-row pl-56 pb-12 items-center">
                     <p className="w-full text-black row-span-1 col-span-2 text-5xl font-light">
@@ -122,13 +167,16 @@ const about = () => {
                       mauris sagittis purus donec.
                     </p>
                   </div>
-                </Link>
+                </MotionLink>
               </div>
 
               <div className="col-start-4 col-end-13">
-                <Link
+                <MotionLink
                   href="/"
                   className="flex flex-col py-12 pb-16 border-b-[1px] border-lightGrey"
+                  initial={{ y: 50 }}
+                  whileInView={{ y: 0 }}
+                  transition={{ delay: 0.2, duration: 1.4, ease: "easeOut" }}
                 >
                   <div className="flex flex-row pl-56 pb-12 items-center">
                     <p className="w-full text-black row-span-1 col-span-2 text-5xl font-light">
@@ -151,13 +199,16 @@ const about = () => {
                       mauris sagittis purus donec.
                     </p>
                   </div>
-                </Link>
+                </MotionLink>
               </div>
 
               <div className="col-start-4 col-end-13">
-                <Link
+                <MotionLink
                   href="/"
                   className="flex flex-col py-12 pb-16 border-b-[1px] border-lightGrey"
+                  initial={{ y: 50 }}
+                  whileInView={{ y: 0 }}
+                  transition={{ delay: 0.2, duration: 1.4, ease: "easeOut" }}
                 >
                   <div className="flex flex-row pl-56 pb-12 items-center">
                     <p className="w-full text-black row-span-1 col-span-2 text-5xl font-light">
@@ -180,7 +231,7 @@ const about = () => {
                       mauris sagittis purus donec.
                     </p>
                   </div>
-                </Link>
+                </MotionLink>
               </div>
             </div>
           </div>
@@ -188,18 +239,23 @@ const about = () => {
 
         <section className="mb-56">
           <div className="w-full relative mx-auto px-32">
-            <div className="w-full grid grid-cols-12 gap-10 mb-28 content-stretch justify-stretch justify-items-stretch items-stretch">
-              <motion.p
+            <motion.div
+              className="w-full grid grid-cols-12 gap-10 mb-28 content-stretch justify-stretch justify-items-stretch items-stretch"
+              initial={{ y: 50 }}
+              whileInView={{ y: 0 }}
+              transition={{ duration: 1.4, ease: "easeOut" }}
+            >
+              <p
                 className="text-black font-light text-2xl row-span-1 col-start-1 col-end-2 self-end"
                 initial={{ y: -50, opacity: 0 }}
                 whileInView={{ y: 0, opacity: 1 }}
                 transition={{ duration: 1.4, ease: "easeOut" }}
               >
                 03
-              </motion.p>
+              </p>
 
               <h2
-                className="text-black font-light uppercase row-span-1 col-start-4 col-end-12 text-[11vw] self-end justify-start"
+                className="text-black font-normal uppercase row-span-1 col-start-4 col-end-12 text-[11vw] self-end justify-start"
                 style={{ lineHeight: "85%" }}
               >
                 Process
@@ -214,10 +270,15 @@ const about = () => {
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                 Suspendisse varius enim in eros elementum tristique.
               </motion.p>
-            </div>
+            </motion.div>
 
             <div className="w-full grid grid-cols-12 gap-y-24 content-stretch justify-stretch justify-items-stretch items-stretch">
-              <div className="col-start-2 col-end-6">
+              <motion.div
+                className="col-start-2 col-end-6"
+                initial={{ y: 50 }}
+                whileInView={{ y: 0 }}
+                transition={{ duration: 1.4, ease: "easeOut" }}
+              >
                 <p className="text-black text-4xl font-light mb-16">Research</p>
                 <p className="text-black text-2xl font-light">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -225,9 +286,14 @@ const about = () => {
                   cursus, mi quis viverra ornare, eros dolor interdum nulla, ut
                   commodo diam libero vitae erat.
                 </p>
-              </div>
+              </motion.div>
 
-              <div className="col-start-8 col-end-12">
+              <motion.div
+                className="col-start-8 col-end-12"
+                initial={{ y: 50 }}
+                whileInView={{ y: 0 }}
+                transition={{ duration: 1.4, ease: "easeOut" }}
+              >
                 <p className="text-black text-4xl font-light mb-16">Strategy</p>
                 <p className="text-black text-2xl font-light">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -235,9 +301,14 @@ const about = () => {
                   cursus, mi quis viverra ornare, eros dolor interdum nulla, ut
                   commodo diam libero vitae erat.
                 </p>
-              </div>
+              </motion.div>
 
-              <div className="col-start-2 col-end-6">
+              <motion.div
+                className="col-start-2 col-end-6"
+                initial={{ y: 50 }}
+                whileInView={{ y: 0 }}
+                transition={{ duration: 1.4, ease: "easeOut" }}
+              >
                 <p className="text-black text-4xl font-light mb-16">
                   Execution
                 </p>
@@ -247,9 +318,14 @@ const about = () => {
                   cursus, mi quis viverra ornare, eros dolor interdum nulla, ut
                   commodo diam libero vitae erat.
                 </p>
-              </div>
+              </motion.div>
 
-              <div className="col-start-8 col-end-12">
+              <motion.div
+                className="col-start-8 col-end-12"
+                initial={{ y: 50 }}
+                whileInView={{ y: 0 }}
+                transition={{ duration: 1.4, ease: "easeOut" }}
+              >
                 <p className="text-black text-4xl font-light mb-16">
                   Evaluation
                 </p>
@@ -259,22 +335,27 @@ const about = () => {
                   cursus, mi quis viverra ornare, eros dolor interdum nulla, ut
                   commodo diam libero vitae erat.
                 </p>
-              </div>
+              </motion.div>
             </div>
           </div>
         </section>
 
         <section className="mb-56">
           <div className="w-full relative mx-auto px-32">
-            <div className="w-full grid grid-cols-12 mb-28 content-stretch justify-stretch justify-items-stretch items-stretch">
-              <motion.p
+            <motion.div
+              className="w-full grid grid-cols-12 mb-28 content-stretch justify-stretch justify-items-stretch items-stretch"
+              initial={{ y: 50 }}
+              whileInView={{ y: 0 }}
+              transition={{ duration: 1.4, ease: "easeOut" }}
+            >
+              <p
                 className="text-black font-light text-2xl row-span-1 col-start-1 col-end-2 self-end"
                 initial={{ y: -50, opacity: 0 }}
                 whileInView={{ y: 0, opacity: 1 }}
                 transition={{ duration: 1.4, ease: "easeOut" }}
               >
                 02
-              </motion.p>
+              </p>
 
               <h2
                 className="text-black uppercase row-span-1 col-start-4 col-end-12 text-[11vw] self-end justify-start"
@@ -282,11 +363,16 @@ const about = () => {
               >
                 Mentions
               </h2>
-            </div>
+            </motion.div>
 
             <div className="w-full grid grid-cols-12 gap-x-10">
               <div className="col-start-4 col-end-13">
-                <div className="flex flex-row py-4 border-y-[1px] justify-between border-lightGrey">
+                <motion.div
+                  className="flex flex-row py-4 border-y-[1px] justify-between border-lightGrey"
+                  initial={{ y: 50 }}
+                  whileInView={{ y: 0 }}
+                  transition={{ duration: 1.4, ease: "easeOut" }}
+                >
                   <p className="text-black font-light text-2xl col-start-1 col-end-1 row-span-2 self-end">
                     Varius enim in eros
                   </p>
@@ -296,8 +382,14 @@ const about = () => {
                   <p className="text-black font-light text-2xl col-start-1 col-end-1 row-span-2 self-end">
                     2023
                   </p>
-                </div>
-                <div className="flex flex-row py-4 border-b-[1px] justify-between border-lightGrey">
+                </motion.div>
+
+                <motion.div
+                  className="flex flex-row py-4 border-b-[1px] justify-between border-lightGrey"
+                  initial={{ y: 50 }}
+                  whileInView={{ y: 0 }}
+                  transition={{ duration: 1.4, ease: "easeOut" }}
+                >
                   <p className="text-black font-light text-2xl col-start-1 col-end-1 row-span-2 self-end">
                     Varius enim in eros
                   </p>
@@ -307,8 +399,14 @@ const about = () => {
                   <p className="text-black font-light text-2xl col-start-1 col-end-1 row-span-2 self-end">
                     2023
                   </p>
-                </div>
-                <div className="flex flex-row py-4 border-b-[1px] justify-between border-lightGrey">
+                </motion.div>
+
+                <motion.div
+                  className="flex flex-row py-4 border-b-[1px] justify-between border-lightGrey"
+                  initial={{ y: 50 }}
+                  whileInView={{ y: 0 }}
+                  transition={{ duration: 1.4, ease: "easeOut" }}
+                >
                   <p className="text-black font-light text-2xl col-start-1 col-end-1 row-span-2 self-end">
                     Varius enim in eros
                   </p>
@@ -318,8 +416,14 @@ const about = () => {
                   <p className="text-black font-light text-2xl col-start-1 col-end-1 row-span-2 self-end">
                     2023
                   </p>
-                </div>
-                <div className="flex flex-row py-4 border-b-[1px] justify-between border-lightGrey">
+                </motion.div>
+
+                <motion.div
+                  className="flex flex-row py-4 border-b-[1px] justify-between border-lightGrey"
+                  initial={{ y: 50 }}
+                  whileInView={{ y: 0 }}
+                  transition={{ duration: 1.4, ease: "easeOut" }}
+                >
                   <p className="text-black font-light text-2xl col-start-1 col-end-1 row-span-2 self-end">
                     Varius enim in eros
                   </p>
@@ -329,8 +433,14 @@ const about = () => {
                   <p className="text-black font-light text-2xl col-start-1 col-end-1 row-span-2 self-end">
                     2023
                   </p>
-                </div>
-                <div className="flex flex-row py-4 border-b-[1px] justify-between border-lightGrey">
+                </motion.div>
+
+                <motion.div
+                  className="flex flex-row py-4 border-b-[1px] justify-between border-lightGrey"
+                  initial={{ y: 50 }}
+                  whileInView={{ y: 0 }}
+                  transition={{ duration: 1.4, ease: "easeOut" }}
+                >
                   <p className="text-black font-light text-2xl col-start-1 col-end-1 row-span-2 self-end">
                     Varius enim in eros
                   </p>
@@ -340,8 +450,14 @@ const about = () => {
                   <p className="text-black font-light text-2xl col-start-1 col-end-1 row-span-2 self-end">
                     2023
                   </p>
-                </div>
-                <div className="flex flex-row py-4 border-b-[1px] justify-between border-lightGrey">
+                </motion.div>
+
+                <motion.div
+                  className="flex flex-row py-4 border-b-[1px] justify-between border-lightGrey"
+                  initial={{ y: 50 }}
+                  whileInView={{ y: 0 }}
+                  transition={{ duration: 1.4, ease: "easeOut" }}
+                >
                   <p className="text-black font-light text-2xl col-start-1 col-end-1 row-span-2 self-end">
                     Varius enim in eros
                   </p>
@@ -351,18 +467,7 @@ const about = () => {
                   <p className="text-black font-light text-2xl col-start-1 col-end-1 row-span-2 self-end">
                     2023
                   </p>
-                </div>
-                <div className="flex flex-row py-4 border-b-[1px] justify-between border-lightGrey">
-                  <p className="text-black font-light text-2xl col-start-1 col-end-1 row-span-2 self-end">
-                    Varius enim in eros
-                  </p>
-                  <p className="text-black font-light text-2xl col-start-1 col-end-1 row-span-2 self-end">
-                    Aenean Magazine
-                  </p>
-                  <p className="text-black font-light text-2xl col-start-1 col-end-1 row-span-2 self-end">
-                    2023
-                  </p>
-                </div>
+                </motion.div>
               </div>
             </div>
           </div>

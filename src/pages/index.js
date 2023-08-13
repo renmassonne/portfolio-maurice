@@ -174,7 +174,7 @@ export default function Home() {
               transition={{ duration: 1.4, ease: "easeOut" }}
               className="w-full grid grid-cols-12"
             >
-              <p className="col-start-3 col-end-12 text-4xl text-black">
+              <p className="col-start-3 col-end-12 text-4xl text-black font-normal">
                 I work with brands and businesses from all around the world to
                 create high quality design and engaging experiences.
               </p>
@@ -190,7 +190,9 @@ export default function Home() {
               whileInView={{ y: 0, opacity: 1 }}
               transition={{ duration: 1.4, ease: "easeOut" }}
             >
-              <p className="text-black text-2xl col-start-1 col-end-2">01</p>
+              <p className="text-black font-light text-2xl col-start-1 col-end-2">
+                01
+              </p>
               <h2
                 className="text-black uppercase col-start-4 col-end-12 text-[16vw]"
                 style={{ lineHeight: "85%" }}
@@ -201,7 +203,7 @@ export default function Home() {
 
             <div className="w-full grid grid-cols-12 grid-rows-2 gap-y-[2.5rem]">
               <motion.p
-                className="text-black text-2xl row-span-1  col-start-7 col-end-13"
+                className="text-black text-2xl font-light row-span-1 col-start-7 col-end-13"
                 initial={{ y: 50, opacity: 0 }}
                 whileInView={{ y: 0, opacity: 1 }}
                 transition={{ duration: 1.4, ease: "easeOut" }}
@@ -213,7 +215,7 @@ export default function Home() {
               </motion.p>
 
               <motion.p
-                className="text-black text-2xl row-span-2  col-start-4 col-end-5"
+                className="text-black text-2xl font-light row-span-2 col-start-4 col-end-5"
                 initial={{ y: 50, opacity: 0 }}
                 whileInView={{ y: 0, opacity: 1 }}
                 transition={{ duration: 1.4, ease: "easeOut" }}
@@ -250,7 +252,9 @@ export default function Home() {
               whileInView={{ y: 0, opacity: 1 }}
               transition={{ duration: 1.4, ease: "easeOut" }}
             >
-              <p className="text-black text-2xl col-start-1 col-end-2">02</p>
+              <p className="text-black text-2xl font-light col-start-1 col-end-2">
+                02
+              </p>
               <h2
                 className="text-black uppercase col-start-4 col-end-12 text-[16vw]"
                 style={{ lineHeight: "85%" }}
@@ -276,7 +280,9 @@ export default function Home() {
                     transition={{ duration: 1.4, ease: "easeOut" }}
                   >
                     <h3 className="uppercase text-3xl text-white">Faune</h3>
-                    <p className="text-2xl text-white">Brand design</p>
+                    <p className="text-2xl text-white font-light">
+                      Brand design
+                    </p>
                   </motion.div>
                 </motion.div>
               </div>
@@ -299,7 +305,9 @@ export default function Home() {
                     <h3 className="uppercase text-3xl text-white">
                       Alma Brava
                     </h3>
-                    <p className="text-2xl text-white">Brand design</p>
+                    <p className="text-2xl text-white font-light">
+                      Brand design
+                    </p>
                   </motion.div>
                 </motion.div>
               </div>
@@ -320,7 +328,7 @@ export default function Home() {
                     transition={{ duration: 1.4, ease: "easeOut" }}
                   >
                     <h3 className="uppercase text-3xl text-white">Le Buzz</h3>
-                    <p className="text-2xl text-white">Web design</p>
+                    <p className="text-2xl text-white font-light">Web design</p>
                   </motion.div>
                 </motion.div>
               </div>
@@ -338,7 +346,7 @@ export default function Home() {
                 transition: { duration: 1 },
               }}
             >
-              <p className="col-start-3 col-end-12 text-5xl text-black">
+              <p className="col-start-3 col-end-12 text-5xl text-black font-light">
                 See all work
               </p>
               <div className="flex items-center justify-center p-1 rounded-full bg-black gap-4">

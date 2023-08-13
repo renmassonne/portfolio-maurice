@@ -26,7 +26,7 @@ const NavBar = () => {
       </Link>
 
       <div className="flex flex-row gap-8">
-        <CustomLink title={"Work"} href={"/Work"} />
+        <CustomLink title={"Work"} href={"/work"} />
 
         <CustomLink title={"About"} href={"/about"} />
 

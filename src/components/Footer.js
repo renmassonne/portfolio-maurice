@@ -4,7 +4,7 @@ import Link from "next/link";
 
 const Footer = () => {
   return (
-    <section className="block min-h-[32px] pb-[80px]">
+    <section className="block min-h-[32px] mt-[20rem] pb-[80px]">
       <div className="w-full relative mx-auto px-32">
         <motion.div
           className="w-full sticky grid grid-cols-12 gap-y-8 content-stretch justify-stretch justify-items-stretch items-start"
@@ -12,11 +12,11 @@ const Footer = () => {
           whileInView={{ y: 0, opacity: 1 }}
           transition={{ duration: 1.4, ease: "easeOut" }}
         >
-          <p className="text-black text-lg text-normal col-start-1 col-end-2">
+          <p className="text-black text-lg font-light col-start-1 col-end-2">
             Don't be shy
           </p>
           <h2
-            className="text-black uppercase col-start-4 col-end-12 text-[16vw]"
+            className="text-black uppercase font-normal col-start-4 col-end-12 text-[16vw]"
             style={{ lineHeight: "85%" }}
           >
             Say hi
@@ -35,25 +35,25 @@ const Footer = () => {
           <div className="flex gap-6 col-start-6 col-end-13 row-span-3 justify-end content-stretch justify-items-stretch">
             <Link
               href="/"
-              className="text-black text-lg text-normal hover:text-medGrey"
+              className="text-black text-lg font-light hover:text-medGrey"
             >
               NextJS
             </Link>
             <Link
               href="/"
-              className="text-black text-lg text-normal hover:text-medGrey"
+              className="text-black text-lg font-light hover:text-medGrey"
             >
               Styleguide
             </Link>
             <Link
               href="/"
-              className="text-black text-lg text-normal hover:text-medGrey"
+              className="text-black text-lg font-light hover:text-medGrey"
             >
               Changelog
             </Link>
             <Link
               href="/"
-              className="text-black text-lg text-normal hover:text-medGrey"
+              className="text-black text-lg font-light hover:text-medGrey"
             >
               Licences
             </Link>
