@@ -12,6 +12,12 @@ import LeBuzz from "../../public/images/LeBuzz.jpeg";
 const FramerImage = motion(Image);
 const MotionLink = motion(Link);
 
+const arrow = {
+  initial: { translateX: 0 },
+  animate: { translateX: -20 },
+  transition: { duration: 1.4 },
+};
+
 export default function Home() {
   return (
     <>
@@ -341,20 +347,22 @@ export default function Home() {
             <MotionLink
               href="/"
               className="flex flex-row gap-16 items-center justify-center"
-              whileHover={{
-                translateX: "-25%",
-                transition: { duration: 1 },
-              }}
+              initial="initial"
+              animate="initial"
+              whileHover="animate"
             >
               <p className="col-start-3 col-end-12 text-5xl text-black font-light">
                 See all work
               </p>
-              <div className="flex items-center justify-center p-1 rounded-full bg-black gap-4">
+              <motion.div
+                className="flex items-center justify-center p-1 rounded-full bg-black gap-4"
+                variants={arrow}
+              >
                 <ArrowIcon
                   className="w-14 h-14  -rotate-[135deg]"
                   color={"white"}
                 />
-              </div>
+              </motion.div>
             </MotionLink>
           </div>
         </section>

@@ -3,12 +3,18 @@ import { motion } from "framer-motion";
 import { ArrowIcon } from "@/components/Icons";
 
 import Head from "next/head";
+import Link from "next/link";
 import Image from "next/image";
 import proFilePic from "../../public/profilePic.png";
-import Link from "next/link";
 
 const FramerImage = motion(Image);
 const MotionLink = motion(Link);
+
+const arrow = {
+  initial: { translateX: 0 },
+  animate: { translateX: -20 },
+  transition: { duration: 1.4 },
+};
 
 const about = () => {
   return (
@@ -144,18 +150,23 @@ const about = () => {
                   className="flex flex-col py-12 pb-16 border-y-[1px] border-lightGrey"
                   initial={{ y: 50 }}
                   whileInView={{ y: 0 }}
+                  animate="initial"
+                  whileHover="animate"
                   transition={{ duration: 1.4, ease: "easeOut" }}
                 >
                   <div className="flex flex-row pl-56 pb-12 items-center">
                     <p className="w-full text-black row-span-1 col-span-2 text-5xl font-light">
                       Strategy
                     </p>
-                    <div className="flex items-center justify-center p-3 rounded-full bg-black gap-4">
+                    <motion.div
+                      variants={arrow}
+                      className="flex items-center justify-center p-3 rounded-full bg-black gap-4"
+                    >
                       <ArrowIcon
                         className="w-12 h-12 -rotate-[135deg]"
                         color={"white"}
                       />
-                    </div>
+                    </motion.div>
                   </div>
 
                   <div className="flex flex-row">
@@ -176,18 +187,23 @@ const about = () => {
                   className="flex flex-col py-12 pb-16 border-b-[1px] border-lightGrey"
                   initial={{ y: 50 }}
                   whileInView={{ y: 0 }}
+                  animate="initial"
+                  whileHover="animate"
                   transition={{ delay: 0.2, duration: 1.4, ease: "easeOut" }}
                 >
                   <div className="flex flex-row pl-56 pb-12 items-center">
                     <p className="w-full text-black row-span-1 col-span-2 text-5xl font-light">
                       Brand design
                     </p>
-                    <div className="flex items-center justify-center p-3 rounded-full bg-black gap-4">
+                    <motion.div
+                      className="flex items-center justify-center p-3 rounded-full bg-black gap-4"
+                      variants={arrow}
+                    >
                       <ArrowIcon
                         className="w-12 h-12 -rotate-[135deg]"
                         color={"white"}
                       />
-                    </div>
+                    </motion.div>
                   </div>
 
                   <div className="flex flex-row">
@@ -208,18 +224,23 @@ const about = () => {
                   className="flex flex-col py-12 pb-16 border-b-[1px] border-lightGrey"
                   initial={{ y: 50 }}
                   whileInView={{ y: 0 }}
+                  animate="initial"
+                  whileHover="animate"
                   transition={{ delay: 0.2, duration: 1.4, ease: "easeOut" }}
                 >
                   <div className="flex flex-row pl-56 pb-12 items-center">
                     <p className="w-full text-black row-span-1 col-span-2 text-5xl font-light">
                       Web design
                     </p>
-                    <div className="flex items-center justify-center p-3 rounded-full bg-black gap-4">
+                    <motion.div
+                      className="flex items-center justify-center p-3 rounded-full bg-black gap-4"
+                      variants={arrow}
+                    >
                       <ArrowIcon
                         className="w-12 h-12 -rotate-[135deg]"
                         color={"white"}
                       />
-                    </div>
+                    </motion.div>
                   </div>
 
                   <div className="flex flex-row">

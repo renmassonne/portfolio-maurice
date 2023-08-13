@@ -10,7 +10,6 @@ import AlmaBrava from "../../public/images/AlmaBrava.png";
 import WaterJournal from "../../public/images/WaterJournal.png";
 
 const MotionLink = motion(Link);
-const FramerImage = motion(Image);
 
 const work = () => {
   return (
