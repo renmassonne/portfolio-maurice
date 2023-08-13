@@ -83,14 +83,16 @@ const work = () => {
 
         <section className="mb-64">
           <div className="relative !mx-auto px-28">
-            <div className="flex flex-col justify-start gap-24">
-              <Link href="/" className="w-max h-full overflow-hidden">
-                <motion.div
-                  className="relative w-full flex flex-col items-center justify-center overflow-hidden"
+            <div className="grid grid-cols-12 gap-20">
+              <div className="flex col-start-1 col-end-12 items-center justify-center relative overflow-hidden">
+                <MotionLink
+                  href="/"
                   initial={{ scale: 1.25 }}
                   whileInView={{ scale: 1 }}
                   transition={{ delay: 0.5, duration: 1.4, ease: "easeOut" }}
+                  className="w-full h-full"
                 >
+                  <div className="w-full h-full absolute z-10 top-auto bottom-auto left-auto right-auto bg-black opacity-20" />
                   <Image
                     alt="WaterJournal"
                     src={WaterJournal}
@@ -105,19 +107,23 @@ const work = () => {
                     <h3 className="uppercase text-3xl text-white">
                       Water Journal
                     </h3>
-                    <p className="text-2xl text-white font-light">Strategy</p>
+                    <p className="text-2xl text-white font-light">
+                      Brand Strategy
+                    </p>
                   </motion.div>
-                </motion.div>
-              </Link>
+                </MotionLink>
+              </div>
 
-              <Link href="/" className="w-max h-full overflow-hidden">
-                <motion.div
-                  className="relative w-full flex flex-col items-center justify-center overflow-hidden"
+              <div className="flex col-start-1 col-end-12 items-center justify-center relative overflow-hidden">
+                <MotionLink
+                  href="/"
                   initial={{ scale: 1.25 }}
                   whileInView={{ scale: 1 }}
                   transition={{ delay: 0.5, duration: 1.4, ease: "easeOut" }}
+                  className="w-full h-full"
                 >
-                  <Image alt="Faune" src={Faune} className="w-[100%]" />
+                  <div className="w-full h-full absolute z-10 top-auto bottom-auto left-auto right-auto bg-black opacity-20" />
+                  <Image alt="Faune" src={Faune} className="w-full" />
                   <motion.div
                     className="absolute z-20 top-auto bottom-12 left-12 right-12 flex items-stretch justify-between"
                     initial={{ y: 50, opacity: 0 }}
@@ -129,17 +135,19 @@ const work = () => {
                       Brand design
                     </p>
                   </motion.div>
-                </motion.div>
-              </Link>
+                </MotionLink>
+              </div>
 
-              <Link href="/" className="w-max h-full overflow-hidden">
-                <motion.div
-                  className="relative w-full flex flex-col items-center justify-center overflow-hidden"
+              <div className="flex col-start-1 col-end-12 items-center justify-center relative overflow-hidden">
+                <MotionLink
+                  href="/"
                   initial={{ scale: 1.25 }}
                   whileInView={{ scale: 1 }}
                   transition={{ delay: 0.5, duration: 1.4, ease: "easeOut" }}
+                  className="w-full h-full"
                 >
-                  <Image alt="Alma Brava" src={AlmaBrava} className="w-full" />
+                  <div className="w-full h-full absolute z-10 top-auto bottom-auto left-auto right-auto bg-black opacity-20" />
+                  <Image alt="AlmaBrava" src={AlmaBrava} className="w-full" />
                   <motion.div
                     className="absolute z-20 top-auto bottom-12 left-12 right-12 flex items-stretch justify-between"
                     initial={{ y: 50, opacity: 0 }}
@@ -153,17 +161,19 @@ const work = () => {
                       Brand design
                     </p>
                   </motion.div>
-                </motion.div>
-              </Link>
+                </MotionLink>
+              </div>
 
-              <Link href="/" className="w-full h-full overflow-hidden">
-                <motion.div
-                  className="relative w-full flex flex-col items-center justify-center overflow-hidden"
+              <div className="flex col-start-1 col-end-13 items-center justify-center relative overflow-hidden">
+                <MotionLink
+                  href="/"
                   initial={{ scale: 1.25 }}
                   whileInView={{ scale: 1 }}
                   transition={{ delay: 0.5, duration: 1.4, ease: "easeOut" }}
+                  className="w-full h-full"
                 >
-                  <Image alt="Le Buzz" src={LeBuzz} className="w-full" />
+                  <div className="w-full h-full absolute z-10 top-auto bottom-auto left-auto right-auto bg-black opacity-20" />
+                  <Image alt="LeBuzz" src={LeBuzz} className="w-full" />
                   <motion.div
                     className="absolute z-20 top-auto bottom-12 left-12 right-12 flex items-stretch justify-between"
                     initial={{ y: 50, opacity: 0 }}
@@ -173,8 +183,8 @@ const work = () => {
                     <h3 className="uppercase text-3xl text-white">Le Buzz</h3>
                     <p className="text-2xl text-white font-light">Web design</p>
                   </motion.div>
-                </motion.div>
-              </Link>
+                </MotionLink>
+              </div>
             </div>
           </div>
         </section>

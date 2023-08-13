@@ -271,7 +271,7 @@ export default function Home() {
                   transition={{ delay: 0.5, duration: 1.4, ease: "easeOut" }}
                   className="w-full h-full"
                 >
-                  <div className="w-full h-full absolute z-10 top-auto bottom-auto left-auto right-auto bg-black opacity-25" />
+                  <div className="w-full h-full absolute z-10 top-auto bottom-auto left-auto right-auto bg-black opacity-20" />
                   <Image alt="Faune" src={Faune} className="w-full" />
                   <motion.div
                     className="absolute z-20 top-auto bottom-12 left-12 right-12 flex items-stretch justify-between"
@@ -294,7 +294,7 @@ export default function Home() {
                   transition={{ delay: 0.5, duration: 1.4, ease: "easeOut" }}
                   className="w-full h-full"
                 >
-                  <div className="w-full h-full absolute z-10 top-auto bottom-auto left-auto right-auto bg-black opacity-25" />
+                  <div className="w-full h-full absolute z-10 top-auto bottom-auto left-auto right-auto bg-black opacity-20" />
                   <Image alt="AlmaBrava" src={AlmaBrava} className="w-full" />
                   <motion.div
                     className="absolute z-20 top-auto bottom-12 left-12 right-12 flex items-stretch justify-between"
@@ -319,7 +319,7 @@ export default function Home() {
                   transition={{ delay: 0.5, duration: 1.4, ease: "easeOut" }}
                   className="w-full h-full"
                 >
-                  <div className="w-full h-full absolute z-10 top-auto bottom-auto left-auto right-auto bg-black opacity-25" />
+                  <div className="w-full h-full absolute z-10 top-auto bottom-auto left-auto right-auto bg-black opacity-20" />
                   <Image alt="LeBuzz" src={LeBuzz} className="w-full" />
                   <motion.div
                     className="absolute z-20 top-auto bottom-12 left-12 right-12 flex items-stretch justify-between"
