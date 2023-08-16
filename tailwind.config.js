@@ -16,6 +16,19 @@ module.exports = {
           "linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.31416316526610644) 100%)",
       },
     },
+    screens: {
+      xxl: { max: "1535px" },
+
+      xl: { max: "1279px" },
+
+      lg: { max: "1023px" },
+
+      md: { max: "767px" },
+
+      sm: { max: "639px" },
+
+      xs: { max: "479px" },
+    },
   },
   plugins: [],
 };
