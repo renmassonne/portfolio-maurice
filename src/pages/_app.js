@@ -15,12 +15,14 @@ export default function App({ Component, pageProps }) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className="bg-light py-2 sm:py-4 md:py-6">
-        <NavBar />
-        <AnimatePresence mode="wait">
-          <Component key={router.asPath} {...pageProps} />
-          <Footer />
-        </AnimatePresence>
+      <main className="bg-light py-2 sm:py-4 md:py-6 w-full min-h-screen">
+        <div className="w-full">
+          <NavBar />
+          <AnimatePresence mode="wait">
+            <Component key={router.asPath} {...pageProps} />
+            <Footer />
+          </AnimatePresence>
+        </div>
       </main>
     </>
   );

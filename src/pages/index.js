@@ -27,9 +27,9 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main>
-        <section className="flex pt-24 sm:pt-32 md:pt-48 lg:pt-[216px] pb-10 mb-16 sm:mb-32 md:mb-64 items-end justify-start">
-          <div className="w-[100%] relative mx-auto px-4 sm:px-8 md:px-16 lg:px-32 z-auto">
+      <div className="overflow-x-hidden w-full">
+        <section className="w-full block pt-24 sm:pt-32 md:pt-48 lg:pt-[216px] pb-10 mb-16 sm:mb-32 md:mb-64 max-w-[1440px] mx-auto">
+          <div className="w-full relative px-4 sm:px-8 md:px-16 lg:px-32 z-auto">
             <div
               className="relative w-full flex flex-wrap items-center justify-center font-normal mx-auto text-[20vw] sm:text-[18vw] md:text-[16vw] text-black z-10 text-center uppercase"
               style={{ lineHeight: "91%", letterSpacing: "-0.5vw" }}
@@ -152,7 +152,7 @@ export default function Home() {
               />
             </motion.div>
 
-            <div className="absolute overflow-hidden w-[30%] sm:w-[25%] md:w-[20%] lg:w-[16%] mt-0 mx-auto bottom-auto left-0 right-0 -top-[20%] sm:-top-[30%] md:-top-[41%] z-0">
+            <div className="absolute overflow-hidden w-[30%] sm:w-[25%] md:w-[20%] lg:w-[20%] mt-0 mx-auto bottom-auto left-0 right-0 -top-[50%] sm:-top-[30%] md:-top-[41%] 2xl:-top-[20%] z-0">
               <motion.div
                 initial={{ scaleX: 1.5, scaleY: 1.5 }}
                 animate={{ scaleX: 1, scaleY: 1 }}
@@ -179,8 +179,8 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="block min-h-[32px] mb-16 sm:mb-32 md:mb-64">
-          <div className="w-full relative mx-auto px-4 sm:px-8 md:px-16 lg:px-32">
+        <section className="w-full block min-h-[32px] mb-16 sm:mb-32 md:mb-64 max-w-[1440px] mx-auto">
+          <div className="w-full relative px-4 sm:px-8 md:px-16 lg:px-32">
             <motion.div
               initial={{ y: 50, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
@@ -195,8 +195,8 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="block min-h-[32px] mb-16 sm:mb-32 md:mb-64">
-          <div className="w-full relative mx-auto px-4 sm:px-8 md:px-16 lg:px-32">
+        <section className="w-full block min-h-[32px] mb-16 sm:mb-32 md:mb-64 max-w-[1920px] mx-auto">
+          <div className="w-full relative px-4 sm:px-8 md:px-16 lg:px-32">
             <motion.div
               className="w-full grid grid-cols-12 content-end justify-stretch justify-items-stretch items-end mb-8 sm:mb-16 md:mb-32"
               initial={{ y: 50, opacity: 0 }}
@@ -257,8 +257,8 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="block min-h-[32px] mb-16 sm:mb-32 md:mb-64">
-          <div className="w-full relative mx-auto px-4 sm:px-8 md:px-16 lg:px-32">
+        <section className="w-full block min-h-[32px] mb-16 sm:mb-32 md:mb-64 overflow-x-hidden max-w-[1920px] mx-auto">
+          <div className="w-full relative px-4 sm:px-8 md:px-16 lg:px-32">
             <motion.div
               className="w-full sticky grid grid-cols-12 content-end justify-stretch justify-items-stretch items-end mb-8 sm:mb-16 md:mb-32"
               initial={{ y: 50, opacity: 0 }}
@@ -276,8 +276,8 @@ export default function Home() {
               </h2>
             </motion.div>
 
-            <div className="grid grid-cols-12 gap-8 sm:gap-12 md:gap-20">
-              <div className="flex col-start-1 col-end-12 items-center justify-center relative overflow-hidden">
+            <div className="grid grid-cols-12 gap-4 sm:gap-8 md:gap-12 lg:gap-20">
+              <div className="flex col-start-1 col-end-13 md:col-end-12 items-center justify-center relative overflow-hidden w-full">
                 <motion.div
                   initial={{ scale: 1.25 }}
                   whileInView={{ scale: 1 }}
@@ -285,7 +285,11 @@ export default function Home() {
                   className="w-full h-full"
                 >
                   <div className="w-full h-full absolute z-10 top-auto bottom-auto left-auto right-auto bg-black opacity-20" />
-                  <Image alt="Faune" src={Faune} className="w-full" />
+                  <Image
+                    alt="Faune"
+                    src={Faune}
+                    className="w-full h-auto max-w-full"
+                  />
                   <motion.div
                     className="absolute z-20 top-auto bottom-4 sm:bottom-8 md:bottom-12 left-4 sm:left-8 md:left-12 right-4 sm:right-8 md:right-12 flex flex-col sm:flex-row items-start sm:items-stretch justify-between gap-2 sm:gap-0"
                     initial={{ y: 50, opacity: 0 }}
@@ -302,7 +306,7 @@ export default function Home() {
                 </motion.div>
               </div>
 
-              <div className="flex col-start-1 col-end-12 items-center justify-center relative overflow-hidden">
+              <div className="flex col-start-1 col-end-13 md:col-end-12 items-center justify-center relative overflow-hidden w-full">
                 <motion.div
                   initial={{ scale: 1.25 }}
                   whileInView={{ scale: 1 }}
@@ -310,9 +314,13 @@ export default function Home() {
                   className="w-full h-full"
                 >
                   <div className="w-full h-full absolute z-10 top-auto bottom-auto left-auto right-auto bg-black opacity-20" />
-                  <Image alt="AlmaBrava" src={AlmaBrava} className="w-full" />
+                  <Image
+                    alt="AlmaBrava"
+                    src={AlmaBrava}
+                    className="w-full h-auto max-w-full"
+                  />
                   <motion.div
-                    className="absolute z-20 top-auto bottom-12 left-12 right-12 flex items-stretch justify-between"
+                    className="absolute z-20 top-auto bottom-4 sm:bottom-8 md:bottom-12 left-4 sm:left-8 md:left-12 right-4 sm:right-8 md:right-12 flex flex-col sm:flex-row items-start sm:items-stretch justify-between gap-2 sm:gap-0"
                     initial={{ y: 50, opacity: 0 }}
                     whileInView={{ y: 0, opacity: 1 }}
                     transition={{ duration: 1.4, ease: "easeOut" }}
@@ -327,7 +335,7 @@ export default function Home() {
                 </motion.div>
               </div>
 
-              <div className="flex col-start-1 col-end-13 items-center justify-center relative overflow-hidden">
+              <div className="flex col-start-1 col-end-13 items-center justify-center relative overflow-hidden w-full">
                 <motion.div
                   initial={{ scale: 1.25 }}
                   whileInView={{ scale: 1 }}
@@ -335,15 +343,23 @@ export default function Home() {
                   className="w-full h-full"
                 >
                   <div className="w-full h-full absolute z-10 top-auto bottom-auto left-auto right-auto bg-black opacity-20" />
-                  <Image alt="LeBuzz" src={LeBuzz} className="w-full" />
+                  <Image
+                    alt="LeBuzz"
+                    src={LeBuzz}
+                    className="w-full h-auto max-w-full"
+                  />
                   <motion.div
-                    className="absolute z-20 top-auto bottom-12 left-12 right-12 flex items-stretch justify-between"
+                    className="absolute z-20 top-auto bottom-4 sm:bottom-8 md:bottom-12 left-4 sm:left-8 md:left-12 right-4 sm:right-8 md:right-12 flex flex-col sm:flex-row items-start sm:items-stretch justify-between gap-2 sm:gap-0"
                     initial={{ y: 50, opacity: 0 }}
                     whileInView={{ y: 0, opacity: 1 }}
                     transition={{ duration: 1.4, ease: "easeOut" }}
                   >
-                    <h3 className="uppercase text-3xl text-white">Le Buzz</h3>
-                    <p className="text-2xl text-white font-light">Web design</p>
+                    <h3 className="uppercase text-xl sm:text-2xl md:text-3xl text-white">
+                      Le Buzz
+                    </h3>
+                    <p className="text-base sm:text-lg md:text-2xl text-white font-light">
+                      Web design
+                    </p>
                   </motion.div>
                 </motion.div>
               </div>
@@ -351,8 +367,8 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="block min-h-[32px] mb-16 sm:mb-32 md:mb-64">
-          <div className="w-full relative mx-auto px-4 sm:px-8 md:px-16 lg:px-32">
+        <section className="w-full block min-h-[32px] mb-16 sm:mb-32 md:mb-64 max-w-[1920px] mx-auto">
+          <div className="w-full relative px-4 sm:px-8 md:px-16 lg:px-32">
             <MotionLink
               href="/"
               className="flex flex-row gap-4 sm:gap-8 md:gap-16 items-center justify-center"
@@ -375,7 +391,7 @@ export default function Home() {
             </MotionLink>
           </div>
         </section>
-      </main>
+      </div>
     </>
   );
 }

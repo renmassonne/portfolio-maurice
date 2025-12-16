@@ -31,7 +31,7 @@ const NavBar = () => {
   };
 
   return (
-    <header className="w-full flex items-center justify-between px-4 sm:px-8 md:px-16 lg:px-32">
+    <header className="w-full flex items-center justify-between px-4 sm:px-8 md:px-16 lg:px-32 max-w-[1920px] mx-auto">
       <Link
         href="/"
         className="font-light text-xl sm:text-2xl md:text-3xl text-black"

@@ -4,7 +4,7 @@ import Link from "next/link";
 const Footer = () => {
   return (
     <section className="block min-h-[32px] mt-16 sm:mt-32 md:mt-[20rem] pb-8 sm:pb-16 md:pb-[80px]">
-      <div className="w-full relative mx-auto px-4 sm:px-8 md:px-16 lg:px-32">
+      <div className="w-full relative mx-auto px-4 sm:px-8 md:px-16 lg:px-32 max-w-[1920px]">
         <div className="w-full sticky grid grid-cols-12 gap-y-4 sm:gap-y-6 md:gap-y-8 content-stretch justify-stretch justify-items-stretch items-start">
           <p className="text-black text-sm sm:text-base md:text-lg font-light col-start-1 col-end-12 md:col-end-2">
             Don't be shy
