@@ -28,10 +28,10 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-        <section className="flex pt-[216px] pb-10 mb-64 items-end justify-start">
-          <div className="w-[100%] relative mx-auto px-32 z-auto">
+        <section className="flex pt-24 sm:pt-32 md:pt-48 lg:pt-[216px] pb-10 mb-16 sm:mb-32 md:mb-64 items-end justify-start">
+          <div className="w-[100%] relative mx-auto px-4 sm:px-8 md:px-16 lg:px-32 z-auto">
             <div
-              className="relative w-full flex flex-wrap items-center justify-center font-normal mx-auto text-[16vw] text-black z-10 text-center uppercase"
+              className="relative w-full flex flex-wrap items-center justify-center font-normal mx-auto text-[20vw] sm:text-[18vw] md:text-[16vw] text-black z-10 text-center uppercase"
               style={{ lineHeight: "91%", letterSpacing: "-0.5vw" }}
             >
               <div className="w-full flex flex-row justify-center items-center">
@@ -141,24 +141,31 @@ export default function Home() {
             </div>
 
             <motion.div
-              className="absolute inline-block left-50 bottom-0 right-auto top-auto"
+              className="absolute inline-block left-50 bottom-0 right-auto top-auto hidden md:block"
               initial={{ opacity: 0, translateY: "-50%" }}
               animate={{ opacity: 1, translateY: 0 }}
               transition={{ delay: 0.8, duration: 1.4, ease: "easeOut" }}
             >
-              <ArrowIcon color={"black"} className="w-14 h-14 " />
+              <ArrowIcon
+                color={"black"}
+                className="w-10 h-10 md:w-14 md:h-14"
+              />
             </motion.div>
 
-            <div className="absolute overflow-hidden w-[16%] mt-0 mx-auto bottom-auto left-0 right-0 -top-[41%] z-0">
-              <FramerImage
-                priority
-                alt="profilePic"
-                style={{ objectFit: "cover" }}
+            <div className="absolute overflow-hidden w-[30%] sm:w-[25%] md:w-[20%] lg:w-[16%] mt-0 mx-auto bottom-auto left-0 right-0 -top-[20%] sm:-top-[30%] md:-top-[41%] z-0">
+              <motion.div
                 initial={{ scaleX: 1.5, scaleY: 1.5 }}
                 animate={{ scaleX: 1, scaleY: 1 }}
                 transition={{ delay: 0.1, duration: 1.2, ease: "easeInOut" }}
-                src={proFilePic}
-              />
+                className="w-full h-full"
+              >
+                <FramerImage
+                  priority
+                  alt="profilePic"
+                  style={{ objectFit: "cover" }}
+                  src={proFilePic}
+                />
+              </motion.div>
               <motion.h1
                 className="absolute hidden top-auto bottom-0 w-full h-full bg-light z-10"
                 initial={{ height: "100%", display: "block" }}
@@ -172,15 +179,15 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="block min-h-[32px] mb-64">
-          <div className="w-full relative mx-auto px-32">
+        <section className="block min-h-[32px] mb-16 sm:mb-32 md:mb-64">
+          <div className="w-full relative mx-auto px-4 sm:px-8 md:px-16 lg:px-32">
             <motion.div
               initial={{ y: 50, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
               transition={{ duration: 1.4, ease: "easeOut" }}
               className="w-full grid grid-cols-12"
             >
-              <p className="col-start-3 col-end-12 text-4xl text-black font-normal">
+              <p className="col-start-1 col-end-12 md:col-start-3 md:col-end-12 text-xl sm:text-2xl md:text-3xl lg:text-4xl text-black font-normal">
                 I work with brands and businesses from all around the world to
                 create high quality design and engaging experiences.
               </p>
@@ -188,28 +195,28 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="block min-h-[32px] mb-64">
-          <div className="w-full relative mx-auto px-32">
+        <section className="block min-h-[32px] mb-16 sm:mb-32 md:mb-64">
+          <div className="w-full relative mx-auto px-4 sm:px-8 md:px-16 lg:px-32">
             <motion.div
-              className="w-full grid grid-cols-12 content-end justify-stretch justify-items-stretch items-end mb-32"
+              className="w-full grid grid-cols-12 content-end justify-stretch justify-items-stretch items-end mb-8 sm:mb-16 md:mb-32"
               initial={{ y: 50, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
               transition={{ duration: 1.4, ease: "easeOut" }}
             >
-              <p className="text-black font-light text-2xl col-start-1 col-end-2">
+              <p className="text-black font-light text-lg sm:text-xl md:text-2xl col-start-1 col-end-2">
                 01
               </p>
               <h2
-                className="text-black uppercase col-start-4 col-end-12 text-[16vw]"
+                className="text-black uppercase col-start-3 col-end-12 md:col-start-4 md:col-end-12 text-[20vw] sm:text-[18vw] md:text-[16vw]"
                 style={{ lineHeight: "85%" }}
               >
                 About
               </h2>
             </motion.div>
 
-            <div className="w-full grid grid-cols-12 grid-rows-2 gap-y-[2.5rem]">
+            <div className="w-full grid grid-cols-12 gap-y-4 sm:gap-y-6 md:gap-y-[2.5rem]">
               <motion.p
-                className="text-black text-2xl font-light row-span-1 col-start-7 col-end-13"
+                className="text-black text-base sm:text-lg md:text-xl lg:text-2xl font-light row-span-1 col-start-1 col-end-12 md:col-start-7 md:col-end-13"
                 initial={{ y: 50, opacity: 0 }}
                 whileInView={{ y: 0, opacity: 1 }}
                 transition={{ duration: 1.4, ease: "easeOut" }}
@@ -221,7 +228,7 @@ export default function Home() {
               </motion.p>
 
               <motion.p
-                className="text-black text-2xl font-light row-span-2 col-start-4 col-end-5"
+                className="text-black text-base sm:text-lg md:text-xl lg:text-2xl font-light row-span-2 col-start-1 col-end-12 md:col-start-4 md:col-end-5"
                 initial={{ y: 50, opacity: 0 }}
                 whileInView={{ y: 0, opacity: 1 }}
                 transition={{ duration: 1.4, ease: "easeOut" }}
@@ -230,19 +237,19 @@ export default function Home() {
               </motion.p>
 
               <motion.div
-                className="row-span-2 col-start-7 col-end-13"
+                className="row-span-2 col-start-1 col-end-12 md:col-start-7 md:col-end-13"
                 initial={{ y: 50, opacity: 0 }}
                 whileInView={{ y: 0, opacity: 1 }}
                 transition={{ delay: 1, duration: 1.4, ease: "easeOut" }}
               >
-                <p className="text-medGrey py-6 border-y-[1px] border-lightGrey text-2xl row-span-2 col-start-4 col-end-5">
+                <p className="text-medGrey py-4 sm:py-6 border-y-[1px] border-lightGrey text-base sm:text-lg md:text-xl lg:text-2xl">
                   Design
                 </p>
 
-                <p className="text-medGrey py-6 border-b-[1px] border-lightGrey text-2xl row-span-2 col-start-4 col-end-5">
+                <p className="text-medGrey py-4 sm:py-6 border-b-[1px] border-lightGrey text-base sm:text-lg md:text-xl lg:text-2xl">
                   Strategy
                 </p>
-                <p className="text-medGrey py-6 border-b-[1px] border-lightGrey text-2xl row-span-2 col-start-4 col-end-5">
+                <p className="text-medGrey py-4 sm:py-6 border-b-[1px] border-lightGrey text-base sm:text-lg md:text-xl lg:text-2xl">
                   Development
                 </p>
               </motion.div>
@@ -250,26 +257,26 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="block min-h-[32px] mb-64">
-          <div className="w-full relative mx-auto px-32">
+        <section className="block min-h-[32px] mb-16 sm:mb-32 md:mb-64">
+          <div className="w-full relative mx-auto px-4 sm:px-8 md:px-16 lg:px-32">
             <motion.div
-              className="w-full sticky grid grid-cols-12 content-end justify-stretch justify-items-stretch items-end mb-32"
+              className="w-full sticky grid grid-cols-12 content-end justify-stretch justify-items-stretch items-end mb-8 sm:mb-16 md:mb-32"
               initial={{ y: 50, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
               transition={{ duration: 1.4, ease: "easeOut" }}
             >
-              <p className="text-black text-2xl font-light col-start-1 col-end-2">
+              <p className="text-black text-lg sm:text-xl md:text-2xl font-light col-start-1 col-end-2">
                 02
               </p>
               <h2
-                className="text-black uppercase col-start-4 col-end-12 text-[16vw]"
+                className="text-black uppercase col-start-3 col-end-12 md:col-start-4 md:col-end-12 text-[20vw] sm:text-[18vw] md:text-[16vw]"
                 style={{ lineHeight: "85%" }}
               >
                 Work
               </h2>
             </motion.div>
 
-            <div className="grid grid-cols-12 gap-20">
+            <div className="grid grid-cols-12 gap-8 sm:gap-12 md:gap-20">
               <div className="flex col-start-1 col-end-12 items-center justify-center relative overflow-hidden">
                 <motion.div
                   initial={{ scale: 1.25 }}
@@ -280,13 +287,15 @@ export default function Home() {
                   <div className="w-full h-full absolute z-10 top-auto bottom-auto left-auto right-auto bg-black opacity-20" />
                   <Image alt="Faune" src={Faune} className="w-full" />
                   <motion.div
-                    className="absolute z-20 top-auto bottom-12 left-12 right-12 flex items-stretch justify-between"
+                    className="absolute z-20 top-auto bottom-4 sm:bottom-8 md:bottom-12 left-4 sm:left-8 md:left-12 right-4 sm:right-8 md:right-12 flex flex-col sm:flex-row items-start sm:items-stretch justify-between gap-2 sm:gap-0"
                     initial={{ y: 50, opacity: 0 }}
                     whileInView={{ y: 0, opacity: 1 }}
                     transition={{ duration: 1.4, ease: "easeOut" }}
                   >
-                    <h3 className="uppercase text-3xl text-white">Faune</h3>
-                    <p className="text-2xl text-white font-light">
+                    <h3 className="uppercase text-xl sm:text-2xl md:text-3xl text-white">
+                      Faune
+                    </h3>
+                    <p className="text-base sm:text-lg md:text-2xl text-white font-light">
                       Brand design
                     </p>
                   </motion.div>
@@ -308,10 +317,10 @@ export default function Home() {
                     whileInView={{ y: 0, opacity: 1 }}
                     transition={{ duration: 1.4, ease: "easeOut" }}
                   >
-                    <h3 className="uppercase text-3xl text-white">
+                    <h3 className="uppercase text-xl sm:text-2xl md:text-3xl text-white">
                       Alma Brava
                     </h3>
-                    <p className="text-2xl text-white font-light">
+                    <p className="text-base sm:text-lg md:text-2xl text-white font-light">
                       Brand design
                     </p>
                   </motion.div>
@@ -342,16 +351,16 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="block min-h-[32px] mb-64">
-          <div className="w-full relative mx-auto px-32">
+        <section className="block min-h-[32px] mb-16 sm:mb-32 md:mb-64">
+          <div className="w-full relative mx-auto px-4 sm:px-8 md:px-16 lg:px-32">
             <MotionLink
               href="/"
-              className="flex flex-row gap-16 items-center justify-center"
+              className="flex flex-row gap-4 sm:gap-8 md:gap-16 items-center justify-center"
               initial="initial"
               animate="initial"
               whileHover="animate"
             >
-              <p className="col-start-3 col-end-12 text-5xl text-black font-light">
+              <p className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-black font-light">
                 See all work
               </p>
               <motion.div
@@ -359,7 +368,7 @@ export default function Home() {
                 variants={arrow}
               >
                 <ArrowIcon
-                  className="w-14 h-14  -rotate-[135deg]"
+                  className="w-8 h-8 sm:w-10 sm:h-10 md:w-14 md:h-14 -rotate-[135deg]"
                   color={"white"}
                 />
               </motion.div>

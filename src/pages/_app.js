@@ -15,7 +15,7 @@ export default function App({ Component, pageProps }) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className="bg-light py-6">
+      <main className="bg-light py-2 sm:py-4 md:py-6">
         <NavBar />
         <AnimatePresence mode="wait">
           <Component key={router.asPath} {...pageProps} />
